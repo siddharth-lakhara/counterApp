@@ -6,11 +6,11 @@ const defaultState = {
 const counter = (state = defaultState, action) => {
   switch (action.type) {
     case 'INCREMENT':
-      return { ...state.count, count: state.count + 1 };
+      return { ...state, count: state.count + 1 };
     case 'DECREMENT':
-      return { ...state.count, count: state.count - 1 };
+      return { ...state, count: state.count - 1 };
     default:
-      return { state };
+      return state;
   }
 };
 

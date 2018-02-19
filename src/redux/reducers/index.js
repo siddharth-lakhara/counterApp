@@ -1,8 +1,6 @@
-import { combinedReducers } from 'redux';
-import couter from './couter';
+import { combineReducers } from 'redux';
+import counter from './couter';
 
-combinedReducers({
+export default combineReducers({
   counter,
 });
-
-export default combinedReducers;

@@ -1,13 +1,21 @@
 import React from 'react';
+import initStore from './redux/store';
+import { Provider } from 'react-redux';
 import Button from './button';
+import TextShow from './textshow';
+
+const store = initStore;
 
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <Provider store={store}>
+        <div>
         Hello <br />
-        <Button />
-      </div>
+          <TextShow />
+          <Button />
+        </div>
+      </Provider>
     );
   }
 }
